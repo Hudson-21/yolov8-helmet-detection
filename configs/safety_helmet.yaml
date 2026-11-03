@@ -1,0 +1,22 @@
+# 数据集配置文件（Ultralytics 标准格式）
+# 数据来源：公开数据集 keremberke/hard-hat-detection（经 HuggingFace 镜像下载）
+#   → tools/coco2yolo.py 把 COCO 标注转成 YOLO 格式
+#   → src/split_dataset.py 清洗去重后按 8:1:1 重新划分
+# 类别体系为头部级判定：0=戴安全帽的头部，1=未戴安全帽的头部
+#
+# 注意：Ultralytics 解析 path 时用的是它自己 settings.json 里的 datasets_dir，
+#      不是本文件所在目录。因此 src/config.py 的 sync_data_yaml() 会在每次启动时
+#      把下面这行自动改写成当前机器的绝对路径（项目挪位置后会自动纠正，无需手改）。
+path: E:/YOLO/safety_helmet/datasets
+
+train: images/train # 训练集图片目录
+val: images/val # 验证集图片目录
+test: images/test # 测试集图片目录（用于最终评估）
+
+# 类别数 = 类别名前缀编号最大值 + 1
+nc: 2
+
+# 类别名，顺序必须与标注文件里的 class id 严格一致
+names:
+  0: hardhat # 已戴安全帽的头部
+  1: no-hardhat # 未戴安全帽的头部（告警类别）

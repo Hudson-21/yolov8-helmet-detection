@@ -1,0 +1,20 @@
+{
+  "time": "2026-10-26T13:47:46",
+  "exp_name": "exp8_p2",
+  "model_spec": "p2",
+  "data": "E:\\YOLO\\safety_helmet\\configs\\safety_helmet.yaml",
+  "hyp": "configs\\hyp_tuned.yaml",
+  "epochs": 25,
+  "imgsz": 640,
+  "batch": 8,
+  "device": 0,
+  "amp": false,
+  "save_dir": "E:\\YOLO\\safety_helmet\\runs\\exp8_p2",
+  "metrics": {
+    "metrics/precision(B)": 0.8911179861445482,
+    "metrics/recall(B)": 0.8857036373362861,
+    "metrics/mAP50(B)": 0.9303616026748978,
+    "metrics/mAP50-95(B)": 0.573097518255894,
+    "fitness": 0.573097518255894
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "time": "2026-10-26T10:01:47",
+  "exp_name": "exp5_cbam",
+  "model_spec": "cbam",
+  "data": "E:\\YOLO\\safety_helmet\\configs\\safety_helmet.yaml",
+  "hyp": "ultralytics default",
+  "epochs": 100,
+  "imgsz": 640,
+  "batch": "auto",
+  "device": 0,
+  "amp": false,
+  "save_dir": "E:\\YOLO\\safety_helmet\\runs\\exp5_cbam",
+  "metrics": {
+    "metrics/precision(B)": 0.9092943059954444,
+    "metrics/recall(B)": 0.8851698465428897,
+    "metrics/mAP50(B)": 0.9347457309893635,
+    "metrics/mAP50-95(B)": 0.5769699291080974,
+    "fitness": 0.5769699291080974
+  }
+}

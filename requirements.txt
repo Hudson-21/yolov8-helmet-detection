@@ -1,0 +1,32 @@
+# =============================================================================
+# 安全帽与反光衣检测系统 —— 运行依赖
+# 本文件版本号与 2026-10 实测通过的本地环境一致（Windows 11 + RTX 4070 Laptop）
+# 安装：pip install -r requirements.txt
+# 国内加速：pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+# =============================================================================
+
+# ---------- 深度学习框架（GPU 版，需与 CUDA 匹配；本机为 CUDA 12.6） ----------
+# 若需重装 CUDA 版 torch，请用官方命令而不是这里的裸包名：
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+torch==2.10.0+cu126
+torchvision==0.25.0+cu126
+
+# ---------- 检测框架 ----------
+# 8.4.184 已在本机以源码可编辑方式安装（pip install -e E:\YOLO\ultralytics-main）
+# 该版本同时提供 YOLOv8 系列权重支持与本项目新增的 CBAMBlock / SEAttention 模块
+ultralytics==8.4.184
+
+# ---------- 基础科学计算与图像处理 ----------
+numpy==2.3.5
+opencv-python==5.0.0.93
+pillow==12.0.0
+matplotlib==3.11.2
+
+# ---------- 工具链 ----------
+pyyaml==6.0.3
+psutil==7.2.2
+polars==2.0.0
+
+# ---------- 可选：模型导出与部署 ----------
+# onnx==1.19.1            # 导出 ONNX 时需要（python src/export.py --format onnx）
+# onnxruntime==1.31.0     # ONNX 推理 / 速度对比时需要

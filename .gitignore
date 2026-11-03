@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+*.swp
+
+# 数据集本体与训练产物（体积大，按 README 中的命令可完整复现）
+datasets/
+runs/
+results/
+data_dl/
+
+# 运行日志：保留训练配置与划分明细（json/csv），不提交 .log
+logs/*.log
+
+# 权重：仅保留最终部署模型（预训练 COCO 权重由 ultralytics 自动下载，不入库）
+weights/pretrained/
+weights/trained/*.pt
+!weights/trained/best.pt
+
+# 其他临时产物
+*.zip
+_base_*
+*.tmp
+
+# 课程报告（含个人信息，单独提交，不公开）
+docs/课程设计报告-*.docx
+
+# 导出模型（12MB，单次请求体积受网络限制无法上传；一条命令可重导）
+*.onnx
